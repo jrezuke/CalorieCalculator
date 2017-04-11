@@ -1,3 +1,7 @@
 <p>
   home works!
 </p>
+<button (click)="onShowModalClick('confirm')">Show confirm modal</button>
+<button (click)="onShowModalClick('inform')">Show inform modal</button>
+<confirm-modal (onClicked)="onModalClicked($event)" #cm title="Confirm Title" body="This is my confirm body man"></confirm-modal>
+<inform-modal (onClicked)="onModalClicked($event)" #im title="Inform Title" body="This is my inform body man"></inform-modal>
