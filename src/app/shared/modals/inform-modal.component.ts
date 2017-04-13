@@ -13,7 +13,8 @@ export class InformModalComponent implements OnInit {
     @Input() title = "Please Confirm";
     @Input() body = "This is my body";
     @Output() onClicked = new EventEmitter<string>();
-    @Output() onInfirmation = new EventEmitter<string>();
+    @Output() onInformation = new EventEmitter<string>();
+    information: string;
 
     constructor() { }
 
@@ -22,6 +23,7 @@ export class InformModalComponent implements OnInit {
     onOk(){
         console.log("onOk");
         this.onClicked.emit("ok");
+        this.onInformation.emit(this.information);
     }
     onCancel(){
         console.log("onCancel");
@@ -33,9 +35,10 @@ export class InformModalComponent implements OnInit {
     }
 
     Hide(){
+        
         this.smModal.hide();
     }
     setInformation(){
-        console.log("setInformation");
+        this.onInformation.emit(this.information);
     }
 }

@@ -34,4 +34,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  onInformation(m: string){
+    console.log("onInformation, m", m);    
+  }
 }
