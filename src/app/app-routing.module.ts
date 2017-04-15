@@ -3,11 +3,15 @@ import { Routes, RouterModule, PreloadAllModules, PreloadingStrategy } from '@an
 import { HomeComponent } from './home/home.component';
 import { SitesComponent } from "app/sites/sites.component";
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AboutComponent } from "app/about/about.component";
+import { ContactComponent } from "app/contact/contact.component";
 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},  
   { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'contact', component:ContactComponent },
   { path: 'sites', component: SitesComponent },
   { path: '**', component: NotFoundComponent}
 ];

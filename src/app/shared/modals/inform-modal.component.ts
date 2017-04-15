@@ -21,12 +21,12 @@ export class InformModalComponent implements OnInit {
     ngOnInit() { }
 
     onOk(){
-        console.log("onOk");
+        console.log("InformModalComponent.onOk emit onClicked(ok), onInformation(this.information)");
         this.onClicked.emit("ok");
         this.onInformation.emit(this.information);
     }
     onCancel(){
-        console.log("onCancel");
+        console.log("InformModalComponent.onCancel emit onClicked(cancel)");
         this.onClicked.emit("cancel");
     }
 

@@ -15,6 +15,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 import { ConfirmModalComponent } from "./shared/modals/confirm-modal.component";
 import { InformModalComponent } from "./shared/modals/inform-modal.component";
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { InformModalComponent } from "./shared/modals/inform-modal.component";
     SitesComponent,
     NotFoundComponent,
     ConfirmModalComponent,
-    InformModalComponent
+    InformModalComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,9 @@ import { InformModalComponent } from "./shared/modals/inform-modal.component";
     TooltipModule.forRoot(),
     ModalModule.forRoot()
   ],
-  providers: [AppConfig],
+  providers: [AppConfig,
+  {provide: 'someThing', useValue: 'some value'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
